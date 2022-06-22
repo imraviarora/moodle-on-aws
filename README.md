@@ -1,4 +1,4 @@
-About My Project
+Moodle Instance Set up in AWS
 =========
 
 
