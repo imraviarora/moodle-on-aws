@@ -8,9 +8,10 @@ In this automation, We have automate these following tasks:
 1. Creation of RedHat 8 Linux EC2 Instance on AWS
 2. Creation of Moodle Security Group for instance (open ports 22, 80 and 443)
 3. Installation of PHP and various releated packages
-4. Installation and configuration of MySQL
-5. Download and configure Moodle 3.10 Stable version
-6. Configure localhost SSL using mod_ssl
+4. Installation and configuration of Apache Server
+5. Installation and configuration of MySQL
+6. Download and configure Moodle 3.10 Stable version
+7. Configure localhost SSL using mod_ssl
 
 
 Prerequisites:
