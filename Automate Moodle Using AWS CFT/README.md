@@ -19,9 +19,9 @@ Moodle Package
 ![AWSAccount](Snapshots/1AWSAccount.png)
 2. Search for CloudFormation service and select it
 ![AWSCloudFormation](Snapshots/2AWSCloudFormation.png)
-3. Click on Stacks section in the left plane
-4. Click on Create Stack button
-5. Upload CFT Template [moodle-installation-cft.yml]([http://localhost:32415](https://github.com/imraviarora/moodle-on-aws/blob/main/Automate%20Moodle%20Using%20AWS%20CFT/moodle-installation-cft.yml) and Click on Next button
+3. Click on Stacks section in the left plane ![SelectStacks](Snapshots/3SelectStacks.png)
+4. Click on Create Stack button ![CreateStack](Snapshots/4CreateStack.png)
+5. Upload CFT Template [moodle-installation-cft.yml](https://github.com/imraviarora/moodle-on-aws/blob/main/Automate%20Moodle%20Using%20AWS%20CFT/moodle-installation-cft.yml) and Click on Next button
 6. Enter stack name and select parameters or leave it default
 7. No need to change anything, leave everything default and Click on Next button
 8. Review Moodle CFT Stack and Click on Create Stack button
