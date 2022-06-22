@@ -31,7 +31,16 @@ Moodle Package
 12. Select Language and click on Next button ![14MoodleInstallationPage_1](Snapshots/14MoodleInstallationPage_1.png)
 13. Review storage paths and Click Next Button ![14MoodleInstallationPage_2](Snapshots/14MoodleInstallationPage_2.png)
 14. We're using MySQL on localhost, click on Next button ![14MoodleInstallationPage_3](Snapshots/14MoodleInstallationPage_3.png)
-15. Type Database configuration as shown in screenshot ![14MoodleInstallationPage_4](Snapshots/14MoodleInstallationPage_4.png)
+15. Type Database configuration as shown in screenshot ![14MoodleInstallationPage_4](Snapshots/14MoodleInstallationPage_4.png)  
+```
+Database host : localhost
+Database name : moodle
+Database user : root
+Database password : <blank>
+Tables prefix : mdl_
+Database port : 3306
+Unix socket : <blank>
+```
 16. We need to create a config.php file on moodle instance ![14MoodleInstallationPage_5](Snapshots/14MoodleInstallationPage_5.png)
 17. Connect moodle instance using key pair used in parameters section. ![13OutputSection](Snapshots/13OutputSection.png) ![15CreatePhpConfigFile_3](Snapshots/15CreatePhpConfigFile_3.png) ![15CreatePhpConfigFile_2](Snapshots/15CreatePhpConfigFile_2.png) 
 ``` 
