@@ -1,19 +1,23 @@
-About My Project
+Moodle Instance Set up in AWS Using CloudFormation Template
 =========
 
 
-## Microservices Voting Application
+## About Moodle
 
-The Linux stack uses Python, Node.js, .NET Core (or optionally Java), with Redis for messaging and Postgres for storage.
+Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments.
 
 Prerequisites:
 ```
-Docker & Kubernetes installed on system
+Recommended hardware requirements (2 CPU, 2 GB Memory, 5GB Storage)
+LAMP
+Moodle Package
 ```
 
-## Run the app in Kubernetes
+## Steps to set up moodle
 -------------------------
-
+1. Log into AWS Account
+2. Search for CloudFormation service and select it
+3. 
 The folder v3 contains the yaml specifications of the Voting App's services.
 
 ```
