@@ -33,11 +33,13 @@ Moodle Package
 14. We're using MySQL on localhost, click on Next button ![14MoodleInstallationPage_3](Snapshots/14MoodleInstallationPage_3.png)
 15. Type Database configuration as shown in screenshot ![14MoodleInstallationPage_4](Snapshots/14MoodleInstallationPage_4.png)
 16. We need to create a config.php file on moodle instance ![14MoodleInstallationPage_5](Snapshots/14MoodleInstallationPage_5.png)
-17. Connect moodle instance using key pair used in parameters section. ![13OutputSection](Snapshots/13OutputSection.png) ![15CreatePhpConfigFile_3](Snapshots/15CreatePhpConfigFile_3.png) ![15CreatePhpConfigFile_2](Snapshots/15CreatePhpConfigFile_2.png) ```
+17. Connect moodle instance using key pair used in parameters section. ![13OutputSection](Snapshots/13OutputSection.png) ![15CreatePhpConfigFile_3](Snapshots/15CreatePhpConfigFile_3.png) ![15CreatePhpConfigFile_2](Snapshots/15CreatePhpConfigFile_2.png) 
+``` 
 ssh -i "key-pair.pem" ec2-user@<public ip or public endpoint>
 sudo su
 vi /var/www/html/moodle/config.php #Paste configuration and save file
-exit ```
+exit 
+```
 18. After config file creation, we can click on Next Button ![16MoodleInstallationPage_6](Snapshots/16MoodleInstallationPage_6.png)
 19. Accept T&C by clicking on continue button ![16MoodleInstallationPage_7](Snapshots/16MoodleInstallationPage_7.png)
 20. Our server have all mimimum php packages inorder to run moodle smoothly ![16MoodleInstallationPage_8](Snapshots/16MoodleInstallationPage_8.png) ![16MoodleInstallationPage_9](Snapshots/16MoodleInstallationPage_9.png)
