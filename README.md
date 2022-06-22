@@ -1,55 +1,46 @@
-Moodle Instance Set up in AWS
+Moodle on AWS -- RAVI KUMAR
 =========
 
+## Commands used to automate moodle installation
 
-## Microservices Voting Application
+Checkout [Moodle using CFT Template](https://github.com/imraviarora/moodle-on-aws/tree/main/Automate%20Moodle%20Using%20AWS%20CFT)
 
-The Linux stack uses Python, Node.js, .NET Core (or optionally Java), with Redis for messaging and Postgres for storage.
+## Commands used to automate moodle installation
 
-Prerequisites:
+Installation of PHP
 ```
-Docker & Kubernetes installed on system
-```
-
-## Run the app in Kubernetes
--------------------------
-
-The folder v3 contains the yaml specifications of the Voting App's services.
-
-```
-$ git clone https://github.com/imraviarora/voting-app-mca-final.git
-$ cd voting-app-mca-final
-$ kubectl create -f v3/
+sudo su
+yum module install php:7.2 -y
+systemctl enable --now php-fpm
+systemctl status php-fpm
 ```
 
-The voting application will be running at [http://localhost:32415](http://localhost:32415), and the results will be at [http://localhost:32414](http://localhost:32414).
-
-OR
-
-The voting application will be running at http://system-ip:32415, and the results will be at http://system-ip:32414.
-
-## Stop this application
--------------------------
-
+Installation and configuration of Apache Server and MySQL
 ```
-$ cd voting-app-mca-final
-$ kubectl delete -f v3/
+yum install mysql mysql-server wget unzip httpd php-mysqli php-zip php-gd php-intl php-xmlrpc php-soap -y
+systemctl enable --now mysqld.service
+systemctl status mysqld.service
+systemctl status httpd
+systemctl start httpd
+
+mysql -u root -e "create database moodle;"
+mysql -u root -e "show databases;"
 ```
 
+Download Moodle stable zip, and unzip inside html directory
+```
+wget https://download.moodle.org/stable310/moodle-3.10.zip
+chmod 777 /var/www/
+unzip moodle-3.10.zip -d /var/www/html/
+setenforce 0
+systemctl reload httpd
+```
 
-Architecture
------
-
-![Architecture diagram](architecture.png)
-
-* A front-end web app in python which lets you vote between two options
-* A Redis queue which collects new votes
-* A .NET core worker which consumes votes and stores them in Postgres
-* A Postgres database backed to store votes
-* A Node.js webapp which shows the results of the voting in real time
-
-
-Note
-----
-
-The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
+Configure localhost SSL using mod_ssl
+```
+dnf install mod_ssl -y 
+systemctl restart httpd
+apachectl -M | grep ssl
+sed -i 's+#SSLCACertificateFile /etc/pki/tls/certs/ca-bundle.crt+SSLCACertificateFile /etc/pki/tls/certs/ca-bundle.crt+g' /etc/httpd/conf.d/ssl.conf
+systemctl reload httpd
+```
