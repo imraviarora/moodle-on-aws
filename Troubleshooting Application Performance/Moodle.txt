@@ -1,0 +1,48 @@
+Moodle
+
+CHALLENGE DEVOPS ICT TEAM -
+
+Analytical procedure: Imagine your recently installed app (might be your recent Moodle install
+or any other) is getting too much time to respond and throwing some 502 error from time to time.
+
+- How would you troubleshoot and restore the expected response time? Please explain
+your steps with so much detail as possible
+
+There are several reasons behind application is taking too much time to respond and throw 502 Gateway timeout Error. Let's discuss each reason one by one.
+
+1. Inadequate server side caching
+2. Lack of a CDN
+3. Images and videos aren't optimized
+
+I'll troubleshoot this issue 
+
+1. Tracert : Traces the route that data packets sent to and from my IP address take, and calculates the amount of time taken. An issue that may occur is increased latency. Latency is defined as the time it takes for the client to send a request and receive a response from the server.
+
+2. Checking Database : In most database-driven applications, the database is the first place where performance issues arise, especially as the data scales. Sometimes application works fine with just a few records in the database can grind to a halt when data rise. How many sql queries are running on that page and see which are the queries are taking time and fix those.
+If MySQL has a large amount of data, i'll go for indexing in the database.
+
+3. If it isn't the database, i'll look at the PHP performance and code. Code improvement is another important thing for performance optimization. Try to improve that code so that sql query don't execute in loop
+
+4. If this problem arise time to time then i'll consider to upgrade PHP version because contributors are working hard to optimize PHP performance in each version and introducing updates for security and better performance.
+
+
+5. checking application logs file 
+
+6. You 
+
+
+Check code, if there is unnecessary looping in code and remove that.
+Try to Add indexes in Database table columns where ever required to reduce the sql query time
+
+
+502 bad gateway solution:
+- try to load website on localhost inside server
+- if it is loading successfully on localhost then might be Request blocked by a firewall, Temporarily disable your firewall
+- check for recent deployments and if it's created a problem due to code issue
+- Examine web server logs
+Check for Unexpected Database Changes
+Recent DNS Changes
+a trace-route 
+Check DNS: Another way to resolve this error is by checking if your fully qualified domain name is resolving properly or not, a
+Clear Local DNS cache: You can also try to clear the DNS cache to see if this issue resolve or not. To do this you need to open your cmd prompt for windows users
+
