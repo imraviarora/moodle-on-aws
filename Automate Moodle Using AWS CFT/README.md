@@ -17,44 +17,36 @@ Moodle Package
 -------------------------
 1. Log into AWS Account and Make sure you're in N.Virginia Region
 ![AWSAccount](Snapshots/1AWSAccount.png)
-3. Search for CloudFormation service and select it
-4. 
-The folder v3 contains the yaml specifications of the Voting App's services.
+2. Search for CloudFormation service and select it
+![AWSCloudFormation](Snapshots/2AWSCloudFormation.png)
+3. Click on Stacks section in the left plane
+4. Click on Create Stack button
+5. Upload CFT Template [moodle-installation-cft.yml]([http://localhost:32415](https://github.com/imraviarora/moodle-on-aws/blob/main/Automate%20Moodle%20Using%20AWS%20CFT/moodle-installation-cft.yml) and Click on Next button
+6. Enter stack name and select parameters or leave it default
+7. No need to change anything, leave everything default and Click on Next button
+8. Review Moodle CFT Stack and Click on Create Stack button
+9. Refresh section to check more Events
+10. After Stack complete successfully, check Output Section to get Moodle Access URL.
+11. Wait for atleast 5mins, before click on Moodle Access URL.
+12. Select Language and click on Next button
+13. Review storage paths and Click Next Button
+14. We're using MySQL on localhost, click on Next button
+15. Type Database configuration as shown in screenshot
+16. We need to create a config.php file on moodle instance
+17. Connect moodle instance using key pair used in parameters section.
+18. After config file creation, we can click on Next Button
+19. Accept T&C by clicking on continue button
+20. Our server have all mimimum php packages inorder to run moodle
+21. Scroll this page and click on Continue button
+22. Set up user profile and login credentials, click on Update Profile
+23. Set up Site 
+24. This is Moodle Admin Panel
+25. Click on Profile button and Logout
+26. Use HTTPS instead of HTTP 
+27. Configured local cert and key
 
-```
-$ git clone https://github.com/imraviarora/voting-app-mca-final.git
-$ cd voting-app-mca-final
-$ kubectl create -f v3/
-```
-
-The voting application will be running at [http://localhost:32415](http://localhost:32415), and the results will be at [http://localhost:32414](http://localhost:32414).
-
-OR
-
-The voting application will be running at http://system-ip:32415, and the results will be at http://system-ip:32414.
-
-## Stop this application
+## Steps to Deletre Moodle environment
 -------------------------
-
-```
-$ cd voting-app-mca-final
-$ kubectl delete -f v3/
-```
-
-
-Architecture
------
-
-![Architecture diagram](architecture.png)
-
-* A front-end web app in python which lets you vote between two options
-* A Redis queue which collects new votes
-* A .NET core worker which consumes votes and stores them in Postgres
-* A Postgres database backed to store votes
-* A Node.js webapp which shows the results of the voting in real time
-
-
-Note
-----
-
-The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
+1. Go to AWS > CloudFormation > Stacks
+2. Select Moodle Stack and Click on Delete button
+ 
