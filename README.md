@@ -1,7 +1,7 @@
 Moodle on AWS -- RAVI KUMAR
 =========
 
-## Commands used to automate moodle installation
+## Click below link to install and configure Moodle on AWS Instance
 
 Checkout [Moodle using CFT Template](https://github.com/imraviarora/moodle-on-aws/tree/main/Automate%20Moodle%20Using%20AWS%20CFT)
 
