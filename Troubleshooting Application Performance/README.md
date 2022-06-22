@@ -13,7 +13,7 @@ Moodle or any other application is taking too much time to respond and throwing 
 ## I'll troubleshoot this issue by performing these tasks. 
 -------------------------
 
-1. Traces the route using Tracert that data packets sent to and from my IP address take, and calculates the amount of time taken. An issue that may occur is increased latency. Latency is defined as the time it takes for the client to send a request and receive a response from the server.
+1. Traces the route using Tracert that data packets sent to and from my IP address take, and calculates the amount of time taken. An issue that may occur is increased latency.
 
 2. Checking Database : In most database-driven applications, the database is the first place where performance issues arise, especially as the data scales. Sometimes application works fine with just a few records in the database can grind to a halt when data rise. How many sql queries are running on that page and see which are the queries are taking time and fix those.
 If MySQL has a large amount of data, i'll go for indexing in the database.
