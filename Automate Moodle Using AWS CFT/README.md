@@ -2,15 +2,20 @@ Setup Moodle Instance in AWS Using CloudFormation Template
 =========
 
 
-## About Moodle
+## About Moodle Automation
 
-Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments.
+In this automation, We have automate these following tasks: 
+1. Creation of RedHat 8 Linux EC2 Instance on AWS
+2. Creation of Moodle Security Group for instance (open ports 22, 80 and 443)
+3. Installation of PHP and various releated packages
+4. Installation and configuration of MySQL
+5. Download and configure Moodle 3.10 Stable version
+6. Configure localhost SSL using mod_ssl
+
 
 Prerequisites:
 ```
-Recommended hardware requirements (2 CPU, 2 GB Memory, 5GB Storage)
-LAMP
-Moodle Package
+AWS Account
 ```
 
 ## Steps to set up moodle
