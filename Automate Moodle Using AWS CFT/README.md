@@ -1,4 +1,4 @@
-Moodle Instance Set up in AWS Using CloudFormation Template
+Setup Moodle Instance in AWS Using CloudFormation Template
 =========
 
 
@@ -15,9 +15,10 @@ Moodle Package
 
 ## Steps to set up moodle
 -------------------------
-1. Log into AWS Account
-2. Search for CloudFormation service and select it
-3. 
+1. Log into AWS Account and Make sure you're in N.Virginia Region
+ 
+3. Search for CloudFormation service and select it
+4. 
 The folder v3 contains the yaml specifications of the Voting App's services.
 
 ```
@@ -43,7 +44,7 @@ $ kubectl delete -f v3/
 
 Architecture
 -----
-
+![Test Image 3](/3DTest.png)
 ![Architecture diagram](architecture.png)
 
 * A front-end web app in python which lets you vote between two options
